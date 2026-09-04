@@ -1,83 +1,331 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Banii mulți nu protejează pe nimeni — Repriza 2</title>
-  <meta name="description" content="Ce ne învață cercetarea privind falimentele jucătorilor NFL despre viața financiară după sport.">
+
+  <meta name="description" content="Ce ne învață cercetarea asupra jucătorilor NFL despre bani, carieră și viața de după sport.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
   <style>
-    .article-hero{padding:190px 0 90px;border-bottom:1px solid var(--line)}
-    .article-hero h1{max-width:1050px;margin-top:28px}
-    .article-meta-line{margin-top:30px;color:var(--muted);font-size:13px}
-    .article-body{max-width:780px;margin:0 auto;padding:90px 0 130px}
-    .article-body p{font-size:18px;line-height:1.95;color:#b7b3aa;margin-top:28px}
-    .article-body h2{font:500 42px/1.1 var(--serif);margin:75px 0 20px}
-    .article-body .callout{margin:55px 0;padding:35px;border-left:2px solid var(--gold);font:500 29px/1.35 var(--serif);color:var(--cream)}
-    .article-body .source-card{margin-top:70px;padding:28px;border:1px solid var(--line);background:#101010}
-    .article-body .source-card strong{font-family:var(--serif);font-size:20px}
-    .article-body .source-card a{display:block;color:var(--gold);font-size:12px;margin-top:12px}
-    .back{display:inline-block;margin-top:45px;color:var(--gold);font-size:12px}
-    @media(max-width:800px){.article-hero{padding-top:140px}.article-body{padding:60px 0 90px}.article-body p{font-size:16px}.article-body h2{font-size:34px}.article-body .callout{font-size:24px}}
+
+    .article-page {
+      padding: 160px 0 120px;
+    }
+
+    .article-header {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .article-header .eyebrow {
+      margin-bottom: 30px;
+    }
+
+    .article-header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(52px, 7vw, 100px);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .article-header h1 span {
+      color: var(--gold);
+    }
+
+    .article-subtitle {
+      max-width: 720px;
+      margin-top: 35px;
+      color: var(--cream-soft);
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .article-body {
+      max-width: 760px;
+      margin: 100px auto 0;
+    }
+
+    .article-body h2 {
+      font-size: 42px;
+      margin: 70px 0 25px;
+    }
+
+    .article-body p {
+      color: #c0bbb0;
+      font-size: 17px;
+      line-height: 1.85;
+      margin: 20px 0;
+    }
+
+    .article-body strong {
+      color: var(--cream);
+    }
+
+    .article-highlight {
+      margin: 55px 0;
+      padding: 35px;
+      border-left: 2px solid var(--gold);
+      background: #111;
+    }
+
+    .article-highlight strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .article-highlight p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .sources-box {
+      margin-top: 90px;
+      padding-top: 40px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sources-box h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 25px;
+    }
+
+    .source-link {
+      display: block;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--cream);
+      transition: 0.25s ease;
+    }
+
+    .source-link:hover {
+      color: var(--gold);
+      padding-left: 8px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 70px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
   </style>
 </head>
+
 <body>
-<header id="site-header">
-  <div class="nav wrap">
-    <a class="brand" href="index.html">Repriza <span>2</span></a>
-    <nav><a href="index.html#misiune">Misiune</a><a href="index.html#date">Date</a><a href="index.html#articole">Articole</a><a href="index.html#despre">Despre</a></nav>
-    <a class="nav-cta" href="index.html#contact">Contact <span>↗</span></a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">REPRIZA <span>2</span></a>
+
+    <nav>
+      <a href="index.html#misiune">Misiune</a>
+      <a href="index.html#program">Program</a>
+      <a href="index.html#despre">Despre</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <section class="article-hero">
-    <div class="wrap">
-      <p class="section-kicker">Repriza 2 / Jurnal</p>
-      <h1>Banii mulți nu protejează pe nimeni.</h1>
-      <p class="article-meta-line">Septembrie 2026 · Repriza 2</p>
-    </div>
-  </section>
 
-  <article class="article-body">
-    <p>Un venit mare poate schimba rapid viața unui sportiv. Dar un venit mare nu este același lucru cu securitatea financiară. Iar cercetarea academică oferă un exemplu puternic despre ce se poate întâmpla după retragere.</p>
+<main class="article-page">
 
-    <h2>Ce spune studiul despre NFL</h2>
-    <p>Un studiu publicat în <em>American Economic Review</em> de Kyle Carlson, Joshua Kim, Annamaria Lusardi și Colin F. Camerer a analizat date privind falimentele unor jucători din National Football League. Cercetătorii au constatat că jucătorii din eșantion au început să depună cereri de faliment la scurt timp după încheierea carierei și au continuat să o facă la un nivel ridicat cel puțin în primii 12 ani de după retragere.</p>
+  <div class="container">
 
-    <p>În eșantionul studiat, 15,7% dintre jucători au ajuns să declare faliment în perioada de 12 ani analizată. Concluzia importantă nu este însă doar procentul. Cercetătorii au observat că veniturile totale și durata carierei au avut un efect surprinzător de mic asupra riscului de faliment.</p>
+    <header class="article-header">
 
-    <div class="callout">Un salariu mare poate cumpăra timp. Nu poate cumpăra automat educație financiară.</div>
+      <div class="eyebrow">
+        REPRIZA 2 · ANALIZĂ
+      </div>
 
-    <h2>Problema este fereastra scurtă</h2>
-    <p>Raportul global FIFPRO din 2016 descrie carierele profesionale ca fiind scurte și fragile. În datele raportului, durata medie globală a unui contract era de aproximativ 22–23 de luni, iar autorii arată că, în majoritatea țărilor, cariera profesională medie este bine sub 10 ani.</p>
+      <h1>
+        Banii mulți nu
+        <span>protejează pe nimeni.</span>
+      </h1>
 
-    <p>Asta schimbă perspectiva. Pentru un sportiv, venitul poate fi concentrat într-o perioadă foarte scurtă, în timp ce obligațiile financiare — locuință, familie, taxe, sănătate și viața de după sport — pot continua zeci de ani.</p>
+      <p class="article-subtitle">
+        Ce ne învață cazul NFL despre faliment, cariere scurte
+        și viața financiară de după sport.
+      </p>
 
-    <h2>Ce ar trebui să însemne educația financiară</h2>
-    <p>Nu înseamnă să-i spui unui junior în ce acțiuni să investească. Înseamnă să-l înveți să pună întrebările corecte: cât din venit poate cheltui, cât trebuie să păstreze, ce taxe are, ce riscuri are, cum verifică un sfat financiar și cum își construiește o rezervă pentru perioada în care contractul nu mai vine.</p>
+    </header>
 
-    <p>Repriza 2 pornește de aici: înainte de a administra milioane, un sportiv trebuie să știe să administreze primul salariu.</p>
 
-    <div class="source-card">
-      <strong>Surse primare</strong>
-      <a href="https://www.aeaweb.org/articles?id=10.1257/aer.p20151038" target="_blank" rel="noopener">American Economic Review — Bankruptcy Rates among NFL Players with Short-Lived Income Spikes ↗</a>
-      <a href="https://www.fifpro.org/en/articles/2019/11/mens-football-global-report-2016" target="_blank" rel="noopener">FIFPRO — Men's Football: Global Report, 2016 ↗</a>
-      <a href="https://www.nber.org/papers/w21085" target="_blank" rel="noopener">NBER — Working Paper 21085 ↗</a>
-    </div>
+    <article class="article-body">
 
-    <a class="back" href="index.html#articole">← Înapoi la articole</a>
-  </article>
+      <p>
+        Sportul profesionist poate produce venituri uriașe într-o perioadă
+        foarte scurtă. Problema este că perioada în care un sportiv câștigă
+        cel mai mult poate fi și una dintre cele mai scurte perioade din viața lui.
+      </p>
+
+      <p>
+        Asta face educația financiară diferită în sport.
+        Nu este doar despre cât câștigi. Este despre cât timp trebuie
+        să-ți susțină acei bani viața.
+      </p>
+
+
+      <h2>Ce ne spune cercetarea?</h2>
+
+      <p>
+        Un studiu publicat în
+        <strong>American Economic Review</strong>
+        de Kyle Carlson, Joshua Kim, Annamaria Lusardi și Colin Camerer
+        a analizat falimentele jucătorilor din NFL.
+      </p>
+
+      <p>
+        Cercetătorii au urmărit jucători care au beneficiat de venituri
+        mari, dar relativ concentrate într-o perioadă scurtă.
+        Rezultatul este important pentru orice sportiv:
+        falimentele nu dispar pur și simplu pentru că veniturile din carieră
+        au fost mari.
+      </p>
+
+
+      <div class="article-highlight">
+        <strong>15,7%</strong>
+
+        <p>
+          În studiul analizat, proporția cumulativă a jucătorilor care
+          au ajuns la faliment a atins 15,7% în cei 12 ani de după retragere.
+        </p>
+      </div>
+
+
+      <h2>Problema nu începe după ultimul meci.</h2>
+
+      <p>
+        Începe mult mai devreme.
+      </p>
+
+      <p>
+        Când un tânăr sportiv primește primul contract important,
+        există o presiune enormă să transforme imediat venitul în
+        mașini, haine, vacanțe, case sau ajutor pentru familie.
+      </p>
+
+      <p>
+        Niciuna dintre aceste lucruri nu este automat greșită.
+        Problema apare atunci când stilul de viață crește mai repede
+        decât capacitatea sportivului de a genera venit pe termen lung.
+      </p>
+
+
+      <h2>Și cariera poate fi mai scurtă decât pare.</h2>
+
+      <p>
+        Raportul global FIFPRO din 2016, bazat pe aproximativ
+        14.000 de jucători din 54 de țări și 87 de ligi,
+        descrie o piață în care multe cariere sunt scurte și fragile.
+      </p>
+
+      <p>
+        Raportul indică o durată medie globală a contractului
+        de aproximativ <strong>22–23 de luni</strong>.
+        De asemenea, durata medie a carierei profesionale este
+        sub 10 ani în majoritatea țărilor analizate.
+      </p>
+
+
+      <h2>De aceea există Repriza 2.</h2>
+
+      <p>
+        Nu pentru a spune sportivilor unde să investească.
+        Nu pentru a promite câștiguri.
+        Și nu pentru a înlocui un consultant financiar.
+      </p>
+
+      <p>
+        Ci pentru a introduce educația financiară în perioada în care
+        poate avea cel mai mare impact:
+        <strong>înainte ca sportivul să aibă nevoie de ea.</strong>
+      </p>
+
+      <p>
+        Primul contract. Primul salariu mare. Prima taxă.
+        Prima investiție. Primul risc.
+        Toate acestea sunt momente în care o decizie bună poate conta
+        mai mult decât încă un zero în contract.
+      </p>
+
+
+      <div class="sources-box">
+
+        <h3>Surse și cercetare</h3>
+
+        <a class="source-link"
+           href="https://www.aeaweb.org/articles?id=10.1257/aer.p20151038"
+           target="_blank"
+           rel="noopener">
+          American Economic Review — Bankruptcy Rates among NFL Players with Short-Lived Income Spikes ↗
+        </a>
+
+        <a class="source-link"
+           href="https://www.nber.org/papers/w21085"
+           target="_blank"
+           rel="noopener">
+          NBER — Working Paper 21085 ↗
+        </a>
+
+        <a class="source-link"
+           href="https://www.fifpro.org/en/articles/2019/11/mens-football-global-report-2016"
+           target="_blank"
+           rel="noopener">
+          FIFPRO — Men's Football: Global Report 2016 ↗
+        </a>
+
+      </div>
+
+
+      <a href="index.html#articole" class="back-link">
+        ← Înapoi la articole
+      </a>
+
+    </article>
+
+  </div>
+
 </main>
 
-<footer><div class="wrap footer-inner"><span>© 2026 Repriza 2</span><span>Educație financiară pentru viața de după sport.</span></div></footer>
 
-<script>
-const header=document.getElementById('site-header');
-window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
-</script>
+<footer>
+  <div class="container footer-wrap">
+
+    <div class="footer-brand">
+      REPRIZA <span>2</span>
+    </div>
+
+    <p>
+      Educație financiară pentru o carieră care continuă și după ultimul fluier.
+    </p>
+
+    <div class="footer-bottom">
+      <span>© 2026 Repriza 2</span>
+      <span>Educație · Sport · Viitor</span>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
