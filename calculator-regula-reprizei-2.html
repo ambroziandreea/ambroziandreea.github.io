@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculator: cum îți împarți banii după Regula Reprizei 2 | Repriza 2</title>
+<meta name="description" content="Calculator gratuit pentru sportivi cu venituri neregulate. Scrii suma primită și vezi cum se împarte în Terenul, Banca de rezerve și Repriza 2, plus câte luni te ține rezerva dacă se oprește salariul.">
+<meta name="author" content="Ambrozi Andreea">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://repriza2.ro/calculator-regula-reprizei-2.html">
+<meta property="og:title" content="Calculator: cum îți împarți banii după Regula Reprizei 2">
+<meta property="og:description" content="Scrii suma primită și vezi în câteva secunde cum o împarți și câte luni te ține Banca de rezerve.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://repriza2.ro/calculator-regula-reprizei-2.html">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DYVVWEW9CT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DYVVWEW9CT');
+</script>
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2615364');
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Calculator Regula Reprizei 2",
+  "url":"https://repriza2.ro/calculator-regula-reprizei-2.html",
+  "description":"Calculator educațional pentru împărțirea veniturilor neregulate în trei părți: Terenul, Banca de rezerve și Repriza 2.",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any",
+  "isAccessibleForFree":true,
+  "inLanguage":"ro",
+  "author":{"@type":"Person","name":"Ambrozi Andreea"},
+  "publisher":{"@type":"Organization","name":"Repriza 2"},
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"RON"}
+}
+</script>
+<style>
+:root{
+  --ink:#0E1518;
+  --paper:#FFFFFF;
+  --paper-2:#F5F5F1;
+  --line:#DEDDD6;
+  --line-dark:#2B3639;
+  --muted:#6A7377;
+  --muted-dark:#9AA5A8;
+  --accent:#C8452A;
+  --deep:#14413F;
+  --sage:#5E8A87;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.col{max-width:680px}
+p{margin:0 0 20px}
+a{color:var(--accent)}
+
+/* nav */
+.nav{position:relative;z-index:3}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:26px 40px}
+.logo{font-size:17px;font-weight:600;letter-spacing:-.01em;text-decoration:none;color:#fff}
+.logo em{font-style:normal;color:var(--accent)}
+.nav a.lnk{font-size:15px;color:var(--muted-dark);text-decoration:none;margin-left:28px}
+.nav a.lnk:hover{color:#fff}
+
+/* head */
+.art-head{background:var(--ink);color:#fff;padding-bottom:64px}
+.eyebrow{font-size:13px;letter-spacing:.06em;color:var(--accent);margin:0 0 22px;font-weight:500}
+.art-head h1{
+  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(34px,4.8vw,56px);line-height:1.06;letter-spacing:-.015em;
+  margin:0 0 22px;max-width:19ch;
+}
+.art-head .sub{font-size:19px;color:#C9D0D2;max-width:50ch;margin:0}
+
+h2{
+  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-.015em;
+  margin:0 0 24px;max-width:20ch;
+}
+.sec-label{font-size:13px;letter-spacing:.06em;color:var(--accent);font-weight:500;margin:0 0 16px}
+
+/* calculator */
+.calc{padding:70px 0 40px}
+.calc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.calc-grid > div{min-width:0}
+.panel{border-top:1px solid var(--line);padding-top:28px}
+.field{margin-bottom:30px}
+.field label,.field .lbl{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+.field .hint{display:block;font-size:14px;color:var(--muted);margin-bottom:12px;line-height:1.5}
+.amount{display:flex;border:1px solid var(--line);background:#fff;max-width:100%}
+.amount:focus-within{border-color:var(--ink)}
+.amount input{
+  flex:1 1 auto;width:100%;min-width:0;border:0;outline:0;background:transparent;
+  font:inherit;font-size:28px;font-family:"Instrument Serif",Georgia,serif;
+  padding:12px 16px;color:var(--ink);
+}
+.cur{display:flex;flex:0 0 auto;border-left:1px solid var(--line)}
+.cur button{
+  border:0;background:transparent;font:inherit;font-size:15px;color:var(--muted);
+  padding:0 16px;cursor:pointer;
+}
+.cur button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.amount.small input{font-size:22px;padding:10px 16px}
+.amount .unit{display:flex;flex:0 0 auto;align-items:center;padding:0 16px;font-size:15px;color:var(--muted);border-left:1px solid var(--line)}
+
+.slider{margin-bottom:18px}
+.slider-top{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;margin-bottom:4px}
+.slider-top b{font-weight:600}
+.slider-top span{font-variant-numeric:tabular-nums;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--deep);margin:4px 0 0}
+.fixed-note{font-size:14px;color:var(--muted);margin:4px 0 12px}
+.reset{
+  background:none;border:0;padding:0;font:inherit;font-size:14px;
+  color:var(--accent);cursor:pointer;text-decoration:underline;
+}
+
+/* result */
+.result{background:var(--paper-2);border:1px solid var(--line);padding:32px}
+.result h3{font-size:14px;font-weight:600;letter-spacing:.04em;margin:0 0 22px;color:var(--muted)}
+.bar{display:flex;height:46px;width:100%;overflow:hidden;margin-bottom:26px;background:#fff}
+.bar div{height:100%;transition:flex-grow .25s ease}
+.b1{background:var(--accent)}
+.b2{background:var(--deep)}
+.b3{background:var(--sage)}
+@media (prefers-reduced-motion:reduce){.bar div{transition:none}}
+.row{display:grid;grid-template-columns:14px minmax(0,1fr) auto;gap:14px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
+.row i{width:12px;height:12px;margin-top:8px;display:block}
+.row .name{font-weight:600;font-size:16px}
+.row .what{display:block;font-size:14px;color:var(--muted);font-weight:400;line-height:1.45}
+.row .sum{
+  font-family:"Instrument Serif",Georgia,serif;font-size:28px;line-height:1.1;
+  text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.row .pct{display:block;font-family:"Instrument Sans",sans-serif;font-size:13px;color:var(--muted)}
+
+.months{margin-top:24px;padding-top:22px;border-top:2px solid var(--ink)}
+.months .big{
+  font-family:"Instrument Serif",Georgia,serif;font-size:40px;line-height:1.05;color:var(--deep);
+  display:block;margin-bottom:8px;
+}
+.months p{font-size:16px;margin:0 0 10px;color:var(--ink)}
+.months p.m{color:var(--muted);font-size:15px}
+.months .empty{color:var(--muted);font-size:15px;margin:0}
+
+.disclaimer{font-size:14px;color:var(--muted);border-left:2px solid var(--accent);padding-left:16px;margin:28px 0 0;line-height:1.55}
+
+/* how to */
+.how{padding:60px 0 20px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);margin-top:30px}
+.step{padding:30px 30px 30px 0;border-right:1px solid var(--line)}
+.step:last-child{border-right:none}
+.step .n{font-family:"Instrument Serif",serif;font-size:15px;color:var(--accent);display:block;margin-bottom:14px}
+.step h3{font-size:18px;font-weight:600;margin:0 0 10px}
+.step p{font-size:16px;color:var(--muted);margin:0}
+.more{margin:40px 0 80px;font-size:17px}
+
+/* newsletter, contact, footer */
+.news{background:var(--paper-2);border-top:1px solid var(--line);padding:80px 0}
+.news-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:start}
+.news h2{margin-bottom:16px}
+.news p.intro{color:var(--muted);margin-bottom:0}
+.news .formbox{background:var(--paper);border:1px solid var(--line);padding:28px}
+.news .formbox h3{font-size:17px;font-weight:600;margin:0 0 10px}
+.news .formbox p{font-size:15px;color:var(--muted);margin:0 0 18px}
+.cta{background:var(--ink);color:#fff;padding:92px 0}
+.cta h2{color:#fff;margin-bottom:20px}
+.cta p{color:#C9D0D2;max-width:52ch;font-size:18px;margin-bottom:34px}
+.btn{
+  display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  font-size:16px;font-weight:500;padding:14px 28px;border-radius:2px;
+  max-width:100%;overflow-wrap:anywhere;
+}
+.btn:hover{background:#A93820}
+footer{background:var(--ink);color:var(--muted-dark);font-size:14px;padding:0 0 46px}
+footer .wrap{border-top:1px solid var(--line-dark);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a{color:var(--muted-dark);text-decoration:none}
+footer a:hover{color:#fff}
+
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+@media (max-width:900px){
+  .calc-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .news-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .nav .wrap{padding:20px 16px}
+  .nav a.lnk{margin-left:14px;font-size:14px}
+  .nav .links a:not(:first-child){display:none}
+  .calc{padding:44px 0 20px}
+  .result{padding:22px 18px}
+  .row{gap:10px}
+  .row .sum{font-size:22px}
+  .months .big{font-size:34px}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--line);padding:24px 0}
+  .step:last-child{border-bottom:none}
+  .btn{padding:14px 20px;font-size:15px}
+}
+@media (max-width:420px){
+  /* pe telefon, butoanele lei / euro trec pe rândul de dedesubt */
+  .amount.main{flex-wrap:wrap}
+  .amount.main input{flex:1 0 100%}
+  .amount.main .cur{flex:1 0 100%;border-left:0;border-top:1px solid var(--line)}
+  .amount.main .cur button{flex:1;padding:10px 0}
+  .row{grid-template-columns:12px minmax(0,1fr)}
+  .row .sum{grid-column:2;text-align:left}
+  .row .pct{display:inline;margin-left:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="art-head">
+  <div class="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html">Repriza <em>2</em></a>
+      <div class="links">
+        <a class="lnk" href="index.html#articole">Articole</a>
+        <a class="lnk" href="index.html#program">Program</a>
+        <a class="lnk" href="index.html#despre">Despre</a>
+        <a class="lnk" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:60px">
+    <p class="eyebrow">Calculator</p>
+    <h1>Ți-au intrat bani. Cum îi împarți?</h1>
+    <p class="sub">Scrie suma care ți-a intrat în cont. Vezi în câteva secunde cât merge pe Teren, cât pe Banca de rezerve și cât pentru Repriza&nbsp;2.</p>
+  </div>
+</div>
+
+<main>
+<section class="calc">
+  <div class="wrap">
+    <div class="calc-grid">
+
+      <div class="panel">
+        <div class="field">
+          <label for="suma">Suma primită</label>
+          <span class="hint" id="suma-hint">Scrie suma netă, adică exact ce ți-a intrat în cont. Salariu, primă, bani de la un contract, orice.</span>
+          <div class="amount main">
+            <input id="suma" type="text" inputmode="numeric" autocomplete="off" value="10.000" aria-describedby="suma-hint">
+            <div class="cur" role="group" aria-label="Moneda">
+              <button type="button" data-cur="lei" aria-pressed="true">lei</button>
+              <button type="button" data-cur="euro" aria-pressed="false">euro</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="lbl">Cum împarți</span>
+          <span class="hint">Pornești de la 50 / 30 / 20. Mută procentele cum ți se potrivește: Terenul primește automat ce rămâne.</span>
+
+          <div class="slider">
+            <div class="slider-top"><b>Banca de rezerve</b><span id="p2-out">30%</span></div>
+            <input id="p2" type="range" min="0" max="80" step="5" value="30" aria-label="Procent pentru Banca de rezerve">
+          </div>
+          <div class="slider">
+            <div class="slider-top"><b>Repriza&nbsp;2</b><span id="p3-out">20%</span></div>
+            <input id="p3" type="range" min="0" max="80" step="5" value="20" aria-label="Procent pentru Repriza&nbsp;2">
+          </div>
+          <p class="fixed-note">Terenul: <b id="p1-out">50%</b></p>
+          <button type="button" class="reset" id="reset">Revino la 50 / 30 / 20</button>
+        </div>
+
+        <div class="field">
+          <label for="chelt">Cheltuielile tale fixe pe lună <span style="font-weight:400;color:var(--muted)">(opțional)</span></label>
+          <span class="hint">Chirie, rată, mâncare, transport, telefon. Tot ce plătești oricum, și în luna în care nu intră nimic.</span>
+          <div class="amount small">
+            <input id="chelt" type="text" inputmode="numeric" autocomplete="off" placeholder="de exemplu 4.500">
+            <span class="unit" id="chelt-cur">lei</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="result" aria-live="polite">
+          <h3>ÎMPĂRȚIREA TA</h3>
+          <div class="bar" aria-hidden="true">
+            <div class="b1" id="bar1" style="flex-grow:50"></div>
+            <div class="b2" id="bar2" style="flex-grow:30"></div>
+            <div class="b3" id="bar3" style="flex-grow:20"></div>
+          </div>
+
+          <div class="row">
+            <i style="background:var(--accent)"></i>
+            <div><span class="name">Terenul</span><span class="what">Banii cu care joci acum. Din ei cheltui liber.</span></div>
+            <div class="sum"><span id="s1">5.000 de lei</span><span class="pct" id="r1">50%</span></div>
+          </div>
+          <div class="row">
+            <i style="background:var(--deep)"></i>
+            <div><span class="name">Banca de rezerve</span><span class="what">Te ține în joc când nu poți juca. Nu te atingi de ea decât când Terenul e gol.</span></div>
+            <div class="sum"><span id="s2">3.000 de lei</span><span class="pct" id="r2">30%</span></div>
+          </div>
+          <div class="row">
+            <i style="background:var(--sage)"></i>
+            <div><span class="name">Repriza&nbsp;2</span><span class="what">Viața de după carieră. Pui puțin de fiecare dată.</span></div>
+            <div class="sum"><span id="s3">2.000 de lei</span><span class="pct" id="r3">20%</span></div>
+          </div>
+
+          <div class="months" id="months">
+            <p class="empty">Scrie cheltuielile tale lunare și afli câte luni te ține Banca de rezerve dacă se oprește salariul.</p>
+          </div>
+        </div>
+
+        <p class="disclaimer">Model educațional orientativ, nu recomandare de investiții. Procentele nu sunt o regulă universală: se adaptează după vârstă, venit, familie, contract și obiective. Calculatorul nu salvează și nu trimite nicio sumă, totul rămâne în telefonul sau calculatorul tău.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <p class="sec-label">Cum folosești rezultatul</p>
+    <h2>Calculul e partea ușoară. Uite ce contează.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Împarte în ziua în care intră banii</h3>
+        <p>Nu la sfârșitul lunii, din ce a rămas. Din ce rămâne nu rămâne nimic.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>Ține părțile separat</h3>
+        <p>Trei conturi sau trei plicuri. Când banii stau la un loc, granițele dintre ei se calcă ușor.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Prima se împarte la fel</h3>
+        <p>O primă nu e bonus. E venitul lunilor în care nu vine nimic.</p>
+      </div>
+    </div>
+    <p class="more col">De unde vine metoda și de ce funcționează, cu un caz real din Liga 2: <a href="articol-regula-reprizei-2.html">Regula Reprizei 2: cum îți împarți banii când nu știi ce vine luna viitoare</a>.</p>
+  </div>
+</section>
+</main>
+
+<div class="news" id="newsletter">
+  <div class="wrap">
+    <div class="news-grid">
+      <div>
+        <p class="sec-label">Newsletter</p>
+        <h2>Nu trimit des. Trimit când am ceva de spus.</h2>
+        <p class="intro">Date verificate despre bani și carieră sportivă, fără reclame și fără sfaturi de pe internet. Poți renunța oricând, dintr-un click.</p>
+      </div>
+      <div class="formbox">
+        <h3>Abonează-te</h3>
+        <p>Primești fiecare articol nou direct pe email.</p>
+        <div class="ml-embedded" data-form="nO3TDI"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="wrap">
+    <p class="sec-label">Contact</p>
+    <h2>Scrieți-mi dacă lucrați cu tineri sportivi.</h2>
+    <p>Calculatorul și materialele de pe site pot fi folosite liber de orice club, academie sau fundație. Dacă vreți să-l folosiți într-o sesiune cu grupul vostru sau vreți un program adaptat, scrieți-mi.</p>
+    <a class="btn" href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span><a href="index.html">Repriza&nbsp;2</a> · educație financiară pentru sportivi</span>
+    <span><a href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var cur = 'lei';
+  var fmt = new Intl.NumberFormat('ro-RO', {maximumFractionDigits:0});
+  var $ = function(id){ return document.getElementById(id); };
+
+  function parse(v){
+    var n = parseInt(String(v).replace(/[^\d]/g,''), 10);
+    return isNaN(n) ? 0 : n;
+  }
+
+  // În română se pune „de" când ultimele două cifre sunt 00 sau între 20 și 99:
+  // 20 de lei, 100 de lei, 3.000 de lei; dar 5 lei, 15 lei, 105 lei.
+  function cuDe(n){
+    n = Math.abs(Math.round(n));
+    var r = n % 100;
+    return (n >= 20 && (r === 0 || r >= 20)) ? ' de ' : ' ';
+  }
+  function money(n){
+    n = Math.round(n);
+    return fmt.format(n) + cuDe(n) + cur;
+  }
+  function numar(n, sg, pl){
+    if (n === 1) return sg;
+    return fmt.format(n) + cuDe(n) + pl;
+  }
+
+  function reformat(el){
+    var n = parse(el.value);
+    el.value = n ? fmt.format(n) : '';
+  }
+
+  function luni(x){
+    if (x < 1){
+      var z = Math.round(x * 30);
+      if (z < 1) return 'mai puțin de o zi';
+      return 'aproximativ ' + numar(z, 'o zi', 'zile');
+    }
+    var r = Math.floor(x * 10) / 10;
+    if (r === 1) return 'o lună';
+    if (r % 1 !== 0) return String(r).replace('.', ',') + ' luni';
+    return numar(r, 'o lună', 'luni');
+  }
+
+  function render(){
+    var p2 = parseInt($('p2').value,10), p3 = parseInt($('p3').value,10);
+    var p1 = 100 - p2 - p3;
+    var suma = parse($('suma').value);
+    var chelt = parse($('chelt').value);
+
+    $('p1-out').textContent = p1 + '%';
+    $('p2-out').textContent = p2 + '%';
+    $('p3-out').textContent = p3 + '%';
+    $('r1').textContent = p1 + '%';
+    $('r2').textContent = p2 + '%';
+    $('r3').textContent = p3 + '%';
+    $('bar1').style.flexGrow = p1;
+    $('bar2').style.flexGrow = p2;
+    $('bar3').style.flexGrow = p3;
+
+    var s2 = suma * p2 / 100, s3 = suma * p3 / 100;
+    var s1 = suma - Math.round(s2) - Math.round(s3);
+    $('s1').textContent = money(s1);
+    $('s2').textContent = money(s2);
+    $('s3').textContent = money(s3);
+    $('chelt-cur').textContent = cur;
+
+    var box = $('months');
+    if (!chelt){
+      box.innerHTML = '<p class="empty">Scrie cheltuielile tale lunare și afli câte luni te ține Banca de rezerve dacă se oprește salariul.</p>';
+      return;
+    }
+    var m = s2 / chelt;
+    var t6 = chelt * 6, t12 = chelt * 12;
+    var html = '<span class="big">' + luni(m) + '</span>';
+    html += '<p>Atât te ține Banca de rezerve din suma asta, dacă de mâine nu mai intră nimic.</p>';
+    html += '<p class="m">Pentru un sportiv, ținta e o rezervă de 6 până la 12 luni de cheltuieli: între ' + money(t6) + ' și ' + money(t12) + '.';
+    if (s2 > 0 && m < 6){
+      var n = Math.ceil(t6 / s2);
+      html += ' Cu sume ca aceasta, ajungi la 6 luni după ' + numar(n, 'o încasare', 'încasări') + '.';
+    }
+    html += '</p>';
+    box.innerHTML = html;
+  }
+
+  function clamp(changed, other){
+    var a = parseInt($(changed).value,10), b = parseInt($(other).value,10);
+    if (a + b > 100){ $(changed).value = 100 - b; }
+  }
+
+  $('p2').addEventListener('input', function(){ clamp('p2','p3'); render(); });
+  $('p3').addEventListener('input', function(){ clamp('p3','p2'); render(); });
+  ['suma','chelt'].forEach(function(id){
+    var el = $(id);
+    el.addEventListener('input', function(){ reformat(el); render(); });
+  });
+  $('reset').addEventListener('click', function(){
+    $('p2').value = 30; $('p3').value = 20; render();
+  });
+  document.querySelectorAll('.cur button').forEach(function(b){
+    b.addEventListener('click', function(){
+      cur = b.getAttribute('data-cur');
+      document.querySelectorAll('.cur button').forEach(function(x){
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+      });
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
