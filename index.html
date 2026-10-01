@@ -268,6 +268,24 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 #mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:#C8452A !important;border-radius:2px !important}
 #mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
 #mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .form-control{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important}
+
+/* ---------- banner cookie-uri ---------- */
+.cookie-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);color:#fff;border-top:2px solid var(--accent);padding:20px 22px calc(22px + env(safe-area-inset-bottom,0px))}
+.cookie-bar .in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:20px 32px;flex-wrap:wrap}
+.cookie-bar .txt{flex:1 1 420px;min-width:0}
+.cookie-bar p{margin:0 0 4px;font-size:15px;line-height:1.5;color:#E3E7E8}
+.cookie-bar a{color:#fff;font-size:14px}
+.cookie-bar .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:0 1 360px;min-width:0}
+.cookie-bar button{font:500 15px/1.2 "Instrument Sans",system-ui,sans-serif;padding:13px 10px;border-radius:2px;cursor:pointer;background:transparent;color:#fff;border:1px solid #fff}
+.cookie-bar button:hover{background:#fff;color:var(--ink)}
+.cookie-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:640px){.cookie-bar .btns{flex:1 1 100%}}
+footer .legal a{margin-left:16px}
+footer .legal a:first-child{margin-left:0}
+footer .legal button{background:none;border:0;padding:0;margin-left:16px;font:inherit;color:var(--muted-dark);cursor:pointer}
+footer .legal button:hover{color:#fff}
+.news .formbox p.form-note{font-size:13px;color:var(--muted);margin:12px 0 0}
+.news .formbox p.form-note a{color:var(--muted)}
 </style>
 <script type="application/ld+json">
 {
@@ -282,12 +300,21 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   "inLanguage":"ro"
 }
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DYVVWEW9CT"></script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>
+  /* Google Analytics pornește doar după acordul vizitatorului (banner de cookie-uri). */
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DYVVWEW9CT');
+  window.r2PornesteGA = function(){
+    if (window.r2GA) return; window.r2GA = true;
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DYVVWEW9CT';
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', 'G-DYVVWEW9CT');
+  };
+  try { if (localStorage.getItem('r2-cookie') === 'da') window.r2PornesteGA(); } catch(e) {}
 </script>
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -439,6 +466,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
         <h3>Abonează-te</h3>
         <p>Primești fiecare articol nou direct pe email.</p>
         <div class="ml-embedded" data-form="nO3TDI"></div>
+        <p class="form-note">Te poți dezabona oricând. Detalii în <a href="confidentialitate.html">Politica de confidențialitate</a>.</p>
       </div>
     </div>
   </div>
@@ -457,6 +485,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="wrap">
     <span>Repriza 2, educație financiară pentru sportivi</span>
     <span><a href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a></span>
+    <span class="legal"><a href="confidentialitate.html">Confidențialitate</a><button type="button" data-cookie-setari>Setări cookie</button></span>
   </div>
 </footer>
 
@@ -469,6 +498,46 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   b.addEventListener('click',function(){ setOpen(m.hidden); });
   m.addEventListener('click',function(e){ if(e.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); });
+})();
+</script>
+
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie-uri" hidden>
+  <div class="in">
+    <div class="txt">
+      <p>Folosesc Google Analytics ca să văd câți oameni citesc articolele și care le sunt de folos. Îl pornesc doar dacă ești de acord.</p>
+      <a href="confidentialitate.html">Politica de confidențialitate</a>
+    </div>
+    <div class="btns">
+      <button type="button" id="cookie-nu">Nu, mulțumesc</button>
+      <button type="button" id="cookie-da">Sunt de acord</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('cookie-bar');
+  function citeste(){ try{ return localStorage.getItem('r2-cookie'); }catch(e){ return null; } }
+  function scrie(v){ try{ localStorage.setItem('r2-cookie',v); }catch(e){} }
+  function stergeGA(){
+    document.cookie.split(';').forEach(function(c){
+      var n=c.split('=')[0].trim();
+      if(n.indexOf('_ga')===0){
+        ['', '; domain=.repriza2.ro', '; domain=repriza2.ro'].forEach(function(d){
+          document.cookie=n+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'+d;
+        });
+      }
+    });
+  }
+  if(!citeste()) bar.hidden=false;
+  document.getElementById('cookie-da').addEventListener('click',function(){ scrie('da'); bar.hidden=true; if(window.r2PornesteGA) window.r2PornesteGA(); });
+  document.getElementById('cookie-nu').addEventListener('click',function(){
+    var aveaAcord = citeste()==='da';
+    scrie('nu'); bar.hidden=true; stergeGA();
+    if(aveaAcord) location.reload();
+  });
+  document.querySelectorAll('[data-cookie-setari]').forEach(function(b){
+    b.addEventListener('click',function(){ bar.hidden=false; document.getElementById('cookie-da').focus(); });
+  });
 })();
 </script>
 </body>
