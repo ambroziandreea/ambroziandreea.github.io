@@ -9,11 +9,16 @@
 <meta name="author" content="Ambrozi Andreea">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://repriza2.ro/">
-<meta property="og:title" content="Repriza 2 — educație financiară pentru sportivi">
+<meta property="og:title" content="Repriza 2 | Educație financiară pentru sportivi">
 <meta property="og:description" content="O carieră durează opt ani. Viața de după, șaptezeci. Educație financiară pentru tineri sportivi din România.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://repriza2.ro/">
 <meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://repriza2.ro/og-repriza2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="Repriza 2: O carieră durează opt ani. Viața de după, șaptezeci.">
+<meta name="twitter:image" content="https://repriza2.ro/og-repriza2.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,6 +213,56 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 .news .formbox p{font-size:15px;color:var(--muted);margin:0 0 18px}
 @media (max-width:900px){.news-grid{grid-template-columns:1fr;gap:32px}}
 
+/* ---------- articole: calculator + ultimele 3 ---------- */
+.tool{display:block;text-decoration:none;color:inherit;background:var(--paper);border:1px solid var(--line);padding:28px 30px;margin:36px 0 34px;max-width:760px;transition:border-color .15s ease}
+.tool:hover{border-color:var(--accent)}
+.tool-kind{display:block;font-size:13px;letter-spacing:.06em;color:var(--deep);font-weight:600;margin-bottom:10px;text-transform:uppercase}
+.tool h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:27px;line-height:1.2;margin:0 0 10px;letter-spacing:-.01em}
+.tool p{color:var(--muted);font-size:16px;margin:0 0 14px}
+.tool-go{font-size:15px;font-weight:500;color:var(--accent)}
+.all-posts{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;font-weight:500;text-decoration:none}
+.all-posts span{font-size:14px;color:var(--muted);font-weight:400}
+.all-posts:hover{padding-left:10px;transition:padding-left .15s ease}
+
+/* ---------- meniu telefon ---------- */
+.logo{white-space:nowrap}
+.hero-in{padding-top:74px}
+.burger{display:none}
+.menu-panel{display:none}
+@media (max-width:640px){
+  .nav .wrap{padding:16px 22px}
+  .nav .links{display:none}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;cursor:pointer}
+  .burger span{display:block;height:2px;width:24px;background:#fff;border-radius:1px}
+  .menu-panel:not([hidden]){display:block;position:absolute;left:0;right:0;top:76px;min-height:calc(100vh - 76px);background:var(--ink);border-top:1px solid var(--line-dark);padding:8px 22px 28px;z-index:5}
+  .menu-panel a{display:block;font-size:13px;font-weight:500;letter-spacing:.06em;color:#fff;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line-dark)}
+  .menu-panel a.menu-cta{font-size:16px;letter-spacing:0;background:var(--accent);text-align:center;margin-top:28px;padding:16px;border:0;border-radius:2px}
+  .hero-in{padding-top:36px}
+  .btn-ghost{display:inline-block;margin:0 0 0 20px;padding:6px 0;vertical-align:middle}
+  .tool{padding:22px}
+  .tool h3{font-size:25px}
+}
+.burger:focus-visible,.menu-panel a:focus-visible,.tool:focus-visible,.all-posts:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- formular MailerLite, adus la stilul site-ului ---------- */
+.formbox .ml-form-embedContainer .ml-form-embedWrapper{background:transparent !important;border-radius:0 !important}
+.formbox .ml-form-embedContainer{display:block !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper,.formbox .ml-form-embedContainer .ml-form-embedWrapper.embedForm{display:block !important;max-width:none !important;width:100% !important}
+.formbox .ml-form-embedContainer input.form-control{width:100% !important;box-sizing:border-box !important}
+.formbox .ml-form-embedContainer .ml-form-align-center,.formbox .ml-form-embedContainer .ml-form-align-left{text-align:left !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedBody .ml-form-embedContent{display:none !important}
+.formbox .ml-form-embedContainer .ml-form-fieldRow{margin:0 0 10px !important}
+.formbox .ml-form-embedContainer input.form-control{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;color:var(--ink) !important;border:1px solid var(--line) !important;border-radius:2px !important;padding:13px 14px !important;height:auto !important;background:var(--paper) !important}
+.formbox .ml-form-embedContainer input.form-control:focus{outline:2px solid var(--accent) !important;outline-offset:1px;border-color:var(--accent) !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit{margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:var(--accent) !important;color:#fff !important;border:0 !important;border-radius:2px !important;padding:14px !important;height:auto !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
+.formbox .ml-form-embedContainer .ml-form-successContent h4{font-family:"Instrument Serif",Georgia,serif !important;font-weight:400 !important;font-size:26px !important;color:var(--deep) !important;margin:0 0 6px !important}
+.formbox .ml-form-embedContainer .ml-form-successContent p{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:15px !important;color:var(--muted) !important;margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-successBody{border-left:2px solid var(--accent);padding-left:16px !important}
+
 </style>
 <script type="application/ld+json">
 {
@@ -243,17 +298,25 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="nav">
     <div class="wrap">
       <a class="logo" href="index.html">Repriza <em>2</em></a>
-      <div>
+      <div class="links">
         <a class="lnk" href="#program">Program</a>
         <a class="lnk" href="#articole">Articole</a>
         <a class="lnk" href="#despre">Despre</a>
         <a class="lnk" href="#newsletter">Newsletter</a>
         <a class="lnk" href="#contact">Contact</a>
       </div>
+      <button class="burger" id="burger" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
     </div>
+    <nav class="menu-panel" id="menu-panel" aria-label="Meniu" hidden>
+      <a href="#program">Program</a>
+      <a href="#articole">Articole</a>
+      <a href="#despre">Despre</a>
+      <a href="#newsletter">Newsletter</a>
+      <a class="menu-cta" href="#contact">Scrie-mi</a>
+    </nav>
   </div>
 
-  <div class="wrap" style="padding-top:74px">
+  <div class="wrap hero-in">
     <p class="eyebrow">Educație financiară pentru sportivi</p>
     <h1>O carieră durează opt ani. Viața de după, șaptezeci.</h1>
     <p class="sub">Educație financiară pentru tineri sportivi din România: bugetare, economisire și planificare pentru viața de după carieră. Materialele de aici sunt gratuite și pot fi folosite liber.</p>
@@ -288,7 +351,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="wrap">
     <p class="sec-label">Program</p>
     <h2>Ce pot livra clubului sau fundației dumneavoastră</h2>
-    <p class="col" style="color:var(--muted)">Programele acoperă noțiunile de bază ale finanțelor personale — cum se face un buget, cum se pun bani deoparte, cum se recunosc creditele riscante și cum se planifică veniturile neregulate. Sunt construite pentru tineri care nu au avut până acum nicio sursă de educație financiară și se adaptează în funcție de vârstă, context și nevoile grupului.</p>
+    <p class="col" style="color:var(--muted)">Programul pornește de la ce trăiește un sportiv în realitate: salarii care întârzie, prime care vin o dată și se duc repede, luni fără contract, primul contract semnat la 16 ani și oamenii noi care apar când apar banii. Fiecare sesiune se adaptează la vârsta, sportul și nevoile grupului.</p>
 
     <div class="offer">
       <div class="card">
@@ -304,7 +367,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
       <div class="card">
         <span class="n">03</span>
         <h3>Sesiuni individuale</h3>
-        <p>Pentru situații care cer o discuție personală — de exemplu, un tânăr care tocmai a semnat primul contract.</p>
+        <p>Pentru situații care cer o discuție personală, de exemplu un tânăr care tocmai a semnat primul contract.</p>
       </div>
     </div>
   </div>
@@ -314,12 +377,14 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="wrap">
     <p class="sec-label">Articole</p>
     <h2>Ce arată datele despre banii sportivilor</h2>
-    <div style="margin-top:36px">
-      <a class="post" href="calculator-regula-reprizei-2.html">
-        <div class="when">Calculator</div>
-        <h3>Ți-au intrat bani. Cum îi împarți?</h3>
-        <p>Scrii suma primită și vezi cât merge pe Teren, cât pe Banca de rezerve și cât pentru Repriza&nbsp;2. Plus câte luni te ține rezerva dacă se oprește salariul.</p>
-      </a>
+    <a class="tool" href="calculator-regula-reprizei-2.html">
+      <span class="tool-kind">Calculator</span>
+      <h3>Ți-au intrat bani. Cum îi împarți?</h3>
+      <p>Scrii suma primită și vezi cât merge pe Teren, cât pe Banca de rezerve și cât pentru Repriza&nbsp;2. Plus câte luni te ține rezerva dacă se oprește salariul.</p>
+      <span class="tool-go">Deschide calculatorul</span>
+    </a>
+    <!-- Pe pagina principală stau doar ultimele 3 articole. La un articol nou: îl pui primul aici, scoți ultimul de aici și îl pui primul și în articole.html. -->
+    <div>
       <a class="post" href="articol-economisire-investitii.html">
         <div class="when">Septembrie 2026</div>
         <h3>Banii de urgență și banii de răbdare: economisire versus investiții</h3>
@@ -333,24 +398,10 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
       <a class="post" href="articol-regula-reprizei-2.html">
         <div class="when">Septembrie 2026</div>
         <h3>Regula Reprizei 2: cum îți împarți banii când nu știi ce vine luna viitoare</h3>
-        <p>Metoda în trei părți — Terenul, Banca de rezerve, Repriza 2 — plus psihologia premiată cu Nobel care explică de ce funcționează.</p>
-      </a>
-      <a class="post" href="articol-messi-retragere.html">
-        <div class="when">Septembrie 2026</div>
-        <h3>Messi s-a retras la 39 de ani. Un fotbalist obișnuit se retrage la 30.</h3>
-        <p>Dacă se termină pentru cel mai bun din istorie, se termină pentru oricine. Ce cumpără, de fapt, pregătirea financiară.</p>
-      </a>
-      <a class="post" href="articol-venituri-neregulate.html">
-        <div class="when">Septembrie 2026</div>
-        <h3>Salariul unui fotbalist nu e un salariu. E o promisiune.</h3>
-        <p>41% dintre jucătorii profesioniști au avut întârzieri la plata salariului. Ce înseamnă veniturile neregulate, și cât ar conta să pui deoparte — calculat concret.</p>
-      </a>
-      <a class="post" href="articol-faliment-fotbalisti.html">
-        <div class="when">Septembrie 2026</div>
-        <h3>Trei din cinci fotbaliști ajung în faliment. Nu contează cât au câștigat.</h3>
-        <p>Ce arată cercetările despre ce se întâmplă cu banii sportivilor după ultimul meci — și de ce salariile mari nu protejează pe nimeni.</p>
+        <p>Metoda în trei părți, Terenul, Banca de rezerve și Repriza 2, plus psihologia premiată cu Nobel care explică de ce funcționează.</p>
       </a>
     </div>
+    <a class="all-posts" href="articole.html">Toate articolele <span>6 articole</span></a>
   </div>
 </section>
 
@@ -363,7 +414,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
         <p class="pull">Ani de zile, singura mea grijă a fost ziua de mâine.</p>
       </div>
       <div>
-        <p>Sunt educator financiar independent. Am plecat din România la 14 ani, împreună cu mama și sora mea, și mi-am construit siguranța financiară muncind — în hale de ciuperci, în fabrică, în schimburi — și învățând, greu, cum să nu mai am grija lunii următoare.</p>
+        <p>Sunt educator financiar independent. Am plecat din România la 14 ani, împreună cu mama și sora mea, și mi-am construit siguranța financiară muncind în hale de ciuperci, în fabrică, în schimburi, și învățând, greu, cum să nu mai am grija lunii următoare.</p>
         <p>Am ajuns, în timp, să-mi deschid propria afacere și să formez oameni care vor să înțeleagă piețele financiare, de la depozite bancare până la ETF-uri și acțiuni.</p>
         <p>Scriu și predau aici pentru tinerii sportivi și pentru oricine nu a avut niciodată acces la educație financiară. Tot ce public poate fi folosit liber de cluburi, academii, fundații sau de oricine are nevoie.</p>
       </div>
@@ -399,10 +450,21 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
 <footer>
   <div class="wrap">
-    <span>Repriza 2 — educație financiară pentru sportivi</span>
+    <span>Repriza 2, educație financiară pentru sportivi</span>
     <span><a href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a></span>
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), m=document.getElementById('menu-panel');
+  if(!b||!m) return;
+  function setOpen(o){ m.hidden=!o; b.setAttribute('aria-expanded',o?'true':'false'); b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul'); }
+  b.addEventListener('click',function(){ setOpen(m.hidden); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>
