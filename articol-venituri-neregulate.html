@@ -4,16 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Salariul unui fotbalist nu e un salariu. E o promisiune. | Repriza 2</title>
-<meta name="description" content="41% dintre fotbaliștii profesioniști au avut întârzieri la salariu, arată studiul FIFPRO. Ce înseamnă veniturile neregulate pentru educația financiară a unui sportiv — cu cifrele făcute concret.">
+<meta name="description" content="41% dintre fotbaliștii profesioniști au avut întârzieri la salariu, arată studiul FIFPRO. Ce înseamnă veniturile neregulate pentru educația financiară a unui sportiv, cu cifrele făcute concret.">
 <meta name="keywords" content="salarii fotbalisti, venituri neregulate, educatie financiara sportivi, FIFPRO, economisire, fond de rezerva, finante personale sportivi, alfabetizare financiara">
 <meta name="author" content="Ambrozi Andreea">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://repriza2.ro/articol-venituri-neregulate.html">
 <meta property="og:title" content="Salariul unui fotbalist nu e un salariu. E o promisiune.">
-<meta property="og:description" content="41% dintre fotbaliștii profesioniști au avut întârzieri la salariu. Ce înseamnă asta pentru educația financiară — cu cifrele făcute concret.">
+<meta property="og:description" content="41% dintre fotbaliștii profesioniști au avut întârzieri la salariu. Ce înseamnă asta pentru educația financiară, cu cifrele făcute concret.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://repriza2.ro/articol-venituri-neregulate.html">
 <meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://repriza2.ro/og-repriza2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://repriza2.ro/og-repriza2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
@@ -226,6 +231,45 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 .news .formbox p{font-size:15px;color:var(--muted);margin:0 0 18px}
 @media (max-width:900px){.news-grid{grid-template-columns:1fr;gap:32px}}
 
+
+/* ---------- meniu telefon ---------- */
+.logo{white-space:nowrap}
+.hero-in{padding-top:60px}
+.burger{display:none}
+.menu-panel{display:none}
+@media (max-width:640px){
+  .nav .wrap{padding:16px 22px}
+  .nav .links{display:none}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;cursor:pointer}
+  .burger span{display:block;height:2px;width:24px;background:#fff;border-radius:1px}
+  .menu-panel:not([hidden]){display:block;position:absolute;left:0;right:0;top:76px;min-height:calc(100vh - 76px);background:var(--ink);border-top:1px solid var(--line-dark);padding:8px 22px 28px;z-index:5}
+  .menu-panel a{display:block;font-size:13px;font-weight:500;letter-spacing:.06em;color:#fff;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line-dark)}
+  .menu-panel a.menu-cta{font-size:16px;letter-spacing:0;background:var(--accent);text-align:center;margin-top:28px;padding:16px;border:0;border-radius:2px}
+  .hero-in{padding-top:36px}
+}
+.burger:focus-visible,.menu-panel a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- formular MailerLite, adus la stilul site-ului ---------- */
+.formbox .ml-form-embedContainer{display:block !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper,.formbox .ml-form-embedContainer .ml-form-embedWrapper.embedForm{display:block !important;max-width:none !important;width:100% !important;background:transparent !important;border-radius:0 !important}
+.formbox .ml-form-embedContainer .ml-form-align-center,.formbox .ml-form-embedContainer .ml-form-align-left{text-align:left !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedBody .ml-form-embedContent{display:none !important}
+.formbox .ml-form-embedContainer .ml-form-fieldRow{margin:0 0 10px !important}
+.formbox .ml-form-embedContainer input.form-control{width:100% !important;box-sizing:border-box !important;font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;color:var(--ink) !important;border:1px solid var(--line) !important;border-radius:2px !important;padding:13px 14px !important;height:auto !important;background:var(--paper) !important}
+.formbox .ml-form-embedContainer input.form-control:focus{outline:2px solid var(--accent) !important;outline-offset:1px;border-color:var(--accent) !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit{margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary,.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:var(--accent) !important;color:#fff !important;border:0 !important;border-radius:2px !important;padding:14px !important;height:auto !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
+.formbox .ml-form-embedContainer .ml-form-successContent h4{font-family:"Instrument Serif",Georgia,serif !important;font-weight:400 !important;font-size:26px !important;color:var(--deep) !important;margin:0 0 6px !important}
+.formbox .ml-form-embedContainer .ml-form-successContent p{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:15px !important;color:var(--muted) !important;margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-successBody{border-left:2px solid var(--accent);padding-left:16px !important}
+
+/* butonul MailerLite: regula lor folosește id-ul formularului, deci îl folosim și noi */
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:#C8452A !important;border-radius:2px !important}
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .form-control{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important}
 </style>
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -241,17 +285,25 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="nav">
     <div class="wrap">
       <a class="logo" href="index.html">Repriza <em>2</em></a>
-      <div>
+      <div class="links">
         <a class="lnk" href="index.html#program">Program</a>
-        <a class="lnk" href="index.html#articole">Articole</a>
+        <a class="lnk" href="articole.html">Articole</a>
         <a class="lnk" href="index.html#despre">Despre</a>
         <a class="lnk" href="index.html#newsletter">Newsletter</a>
         <a class="lnk" href="index.html#contact">Contact</a>
       </div>
+      <button class="burger" id="burger" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
     </div>
+    <nav class="menu-panel" id="menu-panel" aria-label="Meniu" hidden>
+      <a href="index.html#program">Program</a>
+      <a href="articole.html">Articole</a>
+      <a href="index.html#despre">Despre</a>
+      <a href="index.html#newsletter">Newsletter</a>
+      <a class="menu-cta" href="index.html#contact">Scrie-mi</a>
+    </nav>
   </div>
 
-  <div class="wrap" style="padding-top:60px">
+  <div class="wrap hero-in">
     <p class="eyebrow">Articol</p>
     <h1>Salariul unui fotbalist nu e un salariu. E o promisiune.</h1>
     <p class="art-meta">Ambrozi Andreea · Septembrie 2026</p>
@@ -262,13 +314,13 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
   <div class="wrap">
     <div class="col">
 
-      <p class="lead">Când vorbim despre banii unui sportiv, cei mai mulți oameni își imaginează un salariu — o sumă care intră lunar, previzibil, ca la orice alt job.</p>
+      <p class="lead">Când vorbim despre banii unui sportiv, cei mai mulți oameni își imaginează un salariu: o sumă care intră lunar, previzibil, ca la orice alt job.</p>
 
       <p>Datele arată altceva. Iar diferența nu e un detaliu tehnic: ea explică de ce atâția sportivi ajung în dificultate financiară.</p>
 
       <h2>Patru din zece jucători așteaptă după banii lor</h2>
 
-      <p>În 2016, FIFPRO — federația internațională a sindicatelor jucătorilor — a realizat cel mai mare studiu de acest fel făcut vreodată în sportul profesionist. Aproape 14.000 de fotbaliști din 54 de țări și 87 de ligi au răspuns, iar datele au fost evaluate independent de University of Manchester.</p>
+      <p>În 2016, FIFPRO, federația internațională a sindicatelor jucătorilor, a realizat cel mai mare studiu de acest fel făcut vreodată în sportul profesionist. Aproape 14.000 de fotbaliști din 54 de țări și 87 de ligi au răspuns, iar datele au fost evaluate independent de University of Manchester.</p>
 
       <p>Rezultatul principal: 41% dintre cei 13.876 de jucători care au răspuns fuseseră nevoiți să aștepte după salariile lor în ultimele două sezoane.</p>
 
@@ -295,7 +347,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
       <p>Studiul FIFPRO a analizat separat țările cu un procent ridicat de contracte care nu sunt contracte de muncă propriu-zise. România e menționată explicit în această categorie.</p>
 
-      <p>Diferența contează: un contract care nu e contract de muncă oferă mai puține protecții legale atunci când banii nu vin. În unele țări analizate, diferența era dramatică — în Croația, 55% dintre jucătorii fără contract de muncă suferiseră întârzieri, față de 25% dintre cei cu contract de muncă. În România, studiul a constatat că ratele de întârziere erau similare între cele două grupuri.</p>
+      <p>Diferența contează: un contract care nu e contract de muncă oferă mai puține protecții legale atunci când banii nu vin. În unele țări analizate, diferența era dramatică: în Croația, 55% dintre jucătorii fără contract de muncă suferiseră întârzieri, față de 25% dintre cei cu contract de muncă. În România, studiul a constatat că ratele de întârziere erau similare între cele două grupuri.</p>
 
       <p>Cu alte cuvinte: aici, tipul de contract nu te proteja.</p>
 
@@ -328,7 +380,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
       <p>35.000 de dolari nu te fac bogat. Dar hai să vedem ce cumpără de fapt.</p>
 
-      <p>Dacă după retragere cheltuiește 750 de dolari pe lună — mai puțin decât în timpul carierei, dar suficient cât să trăiască — acei bani îi ajung aproximativ patru ani.</p>
+      <p>Dacă după retragere cheltuiește 750 de dolari pe lună, mai puțin decât în timpul carierei, dar suficient cât să trăiască, acei bani îi ajung aproximativ patru ani.</p>
 
       <p>Patru ani în care poate să se recalifice, să termine o școală, să înceapă o afacere, sau pur și simplu să caute ce vrea să facă mai departe, fără să accepte primul lucru care apare pentru că trebuie plătită chiria luna viitoare.</p>
 
@@ -338,7 +390,7 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
       <p>Aici e cel mai important argument pentru educația financiară timpurie.</p>
 
-      <p>Același jucător, aceeași sumă lunară de 300 de dolari, dar care începe la 18 ani în loc de 22 — deci pune deoparte 12 ani, nu 8.</p>
+      <p>Același jucător, aceeași sumă lunară de 300 de dolari, dar care începe la 18 ani în loc de 22, deci pune deoparte 12 ani, nu 8.</p>
 
       <figure>
         <figcaption>Aceeași sumă lunară, doi ani de start diferiți</figcaption>
@@ -374,9 +426,9 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
       <h2>Două precizări de onestitate</h2>
 
-      <p>Studiul FIFPRO citat aici este din 2016. Este cel mai amplu de acest fel realizat vreodată, dar are aproape zece ani vechime, iar situația s-ar putea să se fi schimbat, în bine sau în rău, în unele ligi. L-am folosit tocmai pentru că e o cercetare independentă, cu metodologie verificabilă și eșantion mare — spre deosebire de cifrele care circulă prin presă și nu pot fi verificate.</p>
+      <p>Studiul FIFPRO citat aici este din 2016. Este cel mai amplu de acest fel realizat vreodată, dar are aproape zece ani vechime, iar situația s-ar putea să se fi schimbat, în bine sau în rău, în unele ligi. L-am folosit tocmai pentru că e o cercetare independentă, cu metodologie verificabilă și eșantion mare, spre deosebire de cifrele care circulă prin presă și nu pot fi verificate.</p>
 
-      <p>Calculele de mai sus sunt proiecții matematice, nu promisiuni. Randamentul de 5% pe an este o ipoteză rezonabilă pe termen lung pentru un portofoliu diversificat, dar nu e garantat — piețele urcă și coboară, iar inflația reduce puterea de cumpărare a sumelor finale. Nu am inclus taxe, care variază de la o țară la alta. Ce arată aceste cifre nu e cât vei avea, ci ordinul de mărime al diferenței dintre a ști și a nu ști.</p>
+      <p>Calculele de mai sus sunt proiecții matematice, nu promisiuni. Randamentul de 5% pe an este o ipoteză rezonabilă pe termen lung pentru un portofoliu diversificat, dar nu e garantat: piețele urcă și coboară, iar inflația reduce puterea de cumpărare a sumelor finale. Nu am inclus taxe, care variază de la o țară la alta. Ce arată aceste cifre nu e cât vei avea, ci ordinul de mărime al diferenței dintre a ști și a nu ști.</p>
 
       <h2>Ce urmează</h2>
 
@@ -384,10 +436,10 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
       <div class="src">
         <h4>Surse</h4>
-        <p>FIFPRO Global Employment Report 2016 — studiu pe 13.876 de jucători profesioniști din 54 de țări și 87 de ligi, evaluat independent de University of Manchester; raport public pe footballmap.fifpro.org. Datele privind durata medie a carierei în România provin din ProSport. Calculele financiare sunt proiecții proprii, realizate pe baza venitului median raportat de FIFPRO.</p>
+        <p>FIFPRO Global Employment Report 2016: studiu pe 13.876 de jucători profesioniști din 54 de țări și 87 de ligi, evaluat independent de University of Manchester; raport public pe footballmap.fifpro.org. Datele privind durata medie a carierei în România provin din ProSport. Calculele financiare sunt proiecții proprii, realizate pe baza venitului median raportat de FIFPRO.</p>
       </div>
 
-      <a class="back" href="index.html">← Înapoi la toate articolele</a>
+      <a class="back" href="articole.html">← Înapoi la toate articolele</a>
 
     </div>
   </div>
@@ -421,10 +473,21 @@ a:focus-visible,.post:focus-visible,.btn:focus-visible{outline:2px solid var(--a
 
 <footer>
   <div class="wrap">
-    <span><a href="index.html">Repriza 2</a> — educație financiară pentru sportivi</span>
+    <span><a href="index.html">Repriza 2</a>, educație financiară pentru sportivi</span>
     <span><a href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a></span>
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), m=document.getElementById('menu-panel');
+  if(!b||!m) return;
+  function setOpen(o){ m.hidden=!o; b.setAttribute('aria-expanded',o?'true':'false'); b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul'); }
+  b.addEventListener('click',function(){ setOpen(m.hidden); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>

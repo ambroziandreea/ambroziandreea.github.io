@@ -14,6 +14,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://repriza2.ro/articol-economisire-investitii.html">
 <meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://repriza2.ro/og-repriza2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://repriza2.ro/og-repriza2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
@@ -117,6 +122,8 @@ article li{margin-bottom:10px}
 .cmp tbody th{font-weight:600;color:var(--ink);white-space:nowrap;padding-right:22px}
 .cmp td{color:var(--ink-soft)}
 .tag-ok{color:var(--deep);font-weight:600}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp-wrap .cmp{min-width:560px}
 
 .src{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:26px;margin:56px 0 0}
 .src h4{font-size:14px;font-weight:600;margin:0 0 10px;color:var(--ink);letter-spacing:.02em}
@@ -155,6 +162,45 @@ footer{background:var(--ink);color:var(--muted-dark);font-size:14px;padding:0 0 
 footer .wrap{border-top:1px solid var(--line-dark);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
 footer a{color:var(--muted-dark);text-decoration:none}
 footer a:hover{color:#fff}
+
+/* ---------- meniu telefon ---------- */
+.logo{white-space:nowrap}
+.hero-in{padding-top:60px}
+.burger{display:none}
+.menu-panel{display:none}
+@media (max-width:640px){
+  .nav .wrap{padding:16px 22px}
+  .nav .links{display:none}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:10px;background:none;border:0;cursor:pointer}
+  .burger span{display:block;height:2px;width:24px;background:#fff;border-radius:1px}
+  .menu-panel:not([hidden]){display:block;position:absolute;left:0;right:0;top:76px;min-height:calc(100vh - 76px);background:var(--ink);border-top:1px solid var(--line-dark);padding:8px 22px 28px;z-index:5}
+  .menu-panel a{display:block;font-size:13px;font-weight:500;letter-spacing:.06em;color:#fff;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line-dark)}
+  .menu-panel a.menu-cta{font-size:16px;letter-spacing:0;background:var(--accent);text-align:center;margin-top:28px;padding:16px;border:0;border-radius:2px}
+  .hero-in{padding-top:36px}
+}
+.burger:focus-visible,.menu-panel a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- formular MailerLite, adus la stilul site-ului ---------- */
+.formbox .ml-form-embedContainer{display:block !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper,.formbox .ml-form-embedContainer .ml-form-embedWrapper.embedForm{display:block !important;max-width:none !important;width:100% !important;background:transparent !important;border-radius:0 !important}
+.formbox .ml-form-embedContainer .ml-form-align-center,.formbox .ml-form-embedContainer .ml-form-align-left{text-align:left !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedBody .ml-form-embedContent{display:none !important}
+.formbox .ml-form-embedContainer .ml-form-fieldRow{margin:0 0 10px !important}
+.formbox .ml-form-embedContainer input.form-control{width:100% !important;box-sizing:border-box !important;font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;color:var(--ink) !important;border:1px solid var(--line) !important;border-radius:2px !important;padding:13px 14px !important;height:auto !important;background:var(--paper) !important}
+.formbox .ml-form-embedContainer input.form-control:focus{outline:2px solid var(--accent) !important;outline-offset:1px;border-color:var(--accent) !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit{margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary,.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:var(--accent) !important;color:#fff !important;border:0 !important;border-radius:2px !important;padding:14px !important;height:auto !important;width:100% !important}
+.formbox .ml-form-embedContainer .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
+.formbox .ml-form-embedContainer .ml-form-successContent h4{font-family:"Instrument Serif",Georgia,serif !important;font-weight:400 !important;font-size:26px !important;color:var(--deep) !important;margin:0 0 6px !important}
+.formbox .ml-form-embedContainer .ml-form-successContent p{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:15px !important;color:var(--muted) !important;margin:0 !important}
+.formbox .ml-form-embedContainer .ml-form-successBody{border-left:2px solid var(--accent);padding-left:16px !important}
+
+/* butonul MailerLite: regula lor folosește id-ul formularului, deci îl folosim și noi */
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important;font-weight:500 !important;background:#C8452A !important;border-radius:2px !important}
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover{background:#A93820 !important}
+#mlb2-45575444.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .form-control{font-family:"Instrument Sans",system-ui,sans-serif !important;font-size:16px !important}
 </style>
 </head>
 <body>
@@ -163,17 +209,25 @@ footer a:hover{color:#fff}
   <div class="nav">
     <div class="wrap">
       <a class="logo" href="index.html">Repriza <em>2</em></a>
-      <div>
+      <div class="links">
         <a class="lnk" href="index.html#program">Program</a>
-        <a class="lnk" href="index.html#articole">Articole</a>
+        <a class="lnk" href="articole.html">Articole</a>
         <a class="lnk" href="index.html#despre">Despre</a>
         <a class="lnk" href="index.html#newsletter">Newsletter</a>
         <a class="lnk" href="index.html#contact">Contact</a>
       </div>
+      <button class="burger" id="burger" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
     </div>
+    <nav class="menu-panel" id="menu-panel" aria-label="Meniu" hidden>
+      <a href="index.html#program">Program</a>
+      <a href="articole.html">Articole</a>
+      <a href="index.html#despre">Despre</a>
+      <a href="index.html#newsletter">Newsletter</a>
+      <a class="menu-cta" href="index.html#contact">Scrie-mi</a>
+    </nav>
   </div>
 
-  <div class="wrap" style="padding-top:60px">
+  <div class="wrap hero-in">
     <p class="eyebrow">Capitolul 6</p>
     <h1>Banii de urgență și banii de răbdare</h1>
     <p class="art-meta">Ambrozi Andreea · Septembrie 2026</p>
@@ -305,7 +359,7 @@ footer a:hover{color:#fff}
 
       <figure>
         <figcaption>Trei instrumente, trei profiluri diferite. Cifrele fiscale sunt cele valabile în 2026.</figcaption>
-        <table class="cmp">
+        <div class="cmp-wrap"><table class="cmp">
           <thead>
             <tr>
               <th scope="col">Instrument</th>
@@ -338,7 +392,7 @@ footer a:hover{color:#fff}
               <td>impozit pe câștig 3% peste un an sau 6% sub un an prin intermediar din România, plus CASS peste praguri</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </figure>
 
       <p>Un cuvânt despre titlurile de stat, pentru că sunt cel mai puțin cunoscute și cel mai simplu de înțeles. Împrumuți statul cu banii tăi pentru o perioadă, iar statul îți plătește o dobândă. În ediția Tezaur din septembrie 2026, dobânzile mergeau până la 6,20% la un an, 6,75% la trei ani și 7,15% la cinci ani. Se cumpără cu sume mici, inclusiv online prin Ghișeul.ro, iar dobânda nu se impozitează deloc.</p>
@@ -379,7 +433,7 @@ footer a:hover{color:#fff}
         <p class="verif">Informații verificate la data de 28 septembrie 2026. Dobânzile și cotele fiscale se schimbă în timp, verificați valorile la zi înainte de orice decizie.</p>
       </div>
 
-      <a class="back" href="index.html">← Înapoi la toate articolele</a>
+      <a class="back" href="articole.html">← Înapoi la toate articolele</a>
 
     </div>
   </div>
@@ -413,10 +467,21 @@ footer a:hover{color:#fff}
 
 <footer>
   <div class="wrap">
-    <span><a href="index.html">Repriza 2</a> — educație financiară pentru sportivi</span>
+    <span><a href="index.html">Repriza 2</a>, educație financiară pentru sportivi</span>
     <span><a href="mailto:repriza2oficial@gmail.com">repriza2oficial@gmail.com</a></span>
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), m=document.getElementById('menu-panel');
+  if(!b||!m) return;
+  function setOpen(o){ m.hidden=!o; b.setAttribute('aria-expanded',o?'true':'false'); b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul'); }
+  b.addEventListener('click',function(){ setOpen(m.hidden); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); });
+})();
+</script>
 </body>
 </html>
